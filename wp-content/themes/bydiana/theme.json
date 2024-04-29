@@ -2,36 +2,61 @@
     "$schema": "https://schemas.wp.org/trunk/theme.json",
     "version": 2,
     "settings": {
-      "appearanceTools": true
+        "appearanceTools": true,
+        "layout": {
+            "contentSize": "800px",
+            "wideSize": "960px"
+          }
     },
     "styles": {
-      "color": {
-        "background": "#d5d6d7",
-        "text": "#333"
-      },
-      "typography": {
-        "fontFamily": "Roboto, Sans-Serif",
-        "fontSize": "16px",
-        "fontStyle": "normal",
-        "fontWeight": "400",
-        "lineHeight": "1.6"
-      },
-      "elements": {
-        "heading": {
-          "typography": {
-            "textDecoration": "none",
-            "fontFamily": "Verdana, Sans-Serif",
-            "fontWeight": "600",
-            "lineHeight": "1.2"
-          }
+        "color": {
+            "background": "#d5d6d7",
+            "text": "#333"
+        },
+        "typography": {
+            "fontFamily": "Roboto, Sans-Serif",
+            "fontSize": "16px",
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "lineHeight": "1.6"
+        },
+        "elements": {
+            "heading": {
+                "typography": {
+                    "textDecoration": "none",
+                    "fontFamily": "Verdana, Sans-Serif",
+                    "fontWeight": "600",
+                    "lineHeight": "1.2"
+                }
+            },
+            "link": {
+                "color": {
+                    "text": "#ffffff"
+                },
+                "typography": {
+                    "textDecoration": "none"
+                },
+                ":hover": {
+                    "color": {
+                        "text": "#0057B5"
+                    },
+                    "typography": {
+                        "textDecoration": "underline"
+                    }
+                }
+            }
         }
-      }
     },
     "templateParts": [
-      {
-        "area": "header",
-        "name": "header",
-        "title": "Header"
-      }
+        {
+            "area": "header",
+            "name": "header",
+            "title": "Header"
+        },
+        {
+          "area": "footer",
+          "name": "footer",
+          "title": "Footer"
+        }
     ]
 }
