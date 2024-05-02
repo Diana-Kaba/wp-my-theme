@@ -6,7 +6,7 @@
         "layout": {
             "contentSize": "800px",
             "wideSize": "960px"
-          }
+        }
     },
     "styles": {
         "color": {
@@ -31,18 +31,29 @@
             },
             "link": {
                 "color": {
-                    "text": "#ffffff"
+                    "text": "#00D3B4"
                 },
                 "typography": {
                     "textDecoration": "none"
                 },
                 ":hover": {
                     "color": {
-                        "text": "#0057B5"
+                        "text": "#000"
                     },
                     "typography": {
                         "textDecoration": "underline"
                     }
+                }
+            },
+            "button": {
+                "border": {
+                    "radius": "5px"
+                },
+                ":hover": {
+                    "color": {
+                        "background": "#B3FCEC",
+                        "text": "#000"
+                      }
                 }
             }
         }
@@ -54,9 +65,9 @@
             "title": "Header"
         },
         {
-          "area": "footer",
-          "name": "footer",
-          "title": "Footer"
+            "area": "footer",
+            "name": "footer",
+            "title": "Footer"
         }
     ]
 }
