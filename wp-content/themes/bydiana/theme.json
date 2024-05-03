@@ -9,6 +9,17 @@
         }
     },
     "styles": {
+        "blocks": {
+            "core/categories": {
+                "spacing": {
+                    "padding": {
+                        "left": "0px",
+                        "right": "0px"
+                    }
+                },
+                "css": "& {list-style-type:none;} & li{margin-bottom: 0.5rem;}"
+            }
+        },
         "color": {
             "background": "#d5d6d7",
             "text": "#333"
