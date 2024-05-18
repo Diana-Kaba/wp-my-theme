@@ -10,15 +10,6 @@
 
   <title>Modern Business - Start Bootstrap Template</title>
 
-  <!-- Google fonts -->
-  <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> -->
-
-  <!-- Bootstrap core CSS -->
-  <!-- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
-
-  <!-- Custom styles for this template -->
-  <!-- <link href="css/modern-business.css" rel="stylesheet"> -->
-
   <?php wp_head();?>
 </head>
 
@@ -32,7 +23,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
+        <!-- <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>
@@ -76,7 +67,19 @@
               <a class="dropdown-item" href="pricing.html">Pricing Table</a>
             </div>
           </li>
-        </ul>
+        </ul> -->
+        <?php
+        if (has_nav_menu('primary')) {
+          wp_nav_menu([
+          'theme_location' => 'primary',
+          'container' => false,
+          'menu_class' => 'navbar-nav ml-auto',
+          'fallback_cb' => false,
+          'depth' => 2,
+          'walker' => new Bootkit_Nav_Walker(),
+        ]);
+        }
+        ?>
       </div>
     </div>
   </nav>
@@ -283,9 +286,6 @@
     <!-- /.container -->
   </footer>
 
-  <!-- Bootstrap core JavaScript -->
-  <!-- <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
   <?php wp_footer();?>
 
 </body>
