@@ -1,5 +1,5 @@
         <!-- Search Widget -->
-        <div class="card mb-4">
+        <!-- <div class="card mb-4">
           <h5 class="card-header">Search</h5>
           <div class="card-body">
             <div class="input-group">
@@ -9,7 +9,8 @@
               </span>
             </div>
           </div>
-        </div>
+        </div> -->
+        <?php get_search_form();?>
 
         <!-- Categories Widget -->
         <div class="card my-4">
@@ -53,3 +54,7 @@
             You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
           </div>
         </div>
+
+        <?php if (is_active_sidebar('bootdi_sidebar')) {
+          dynamic_sidebar('bootdi_sidebar');
+        }?>
