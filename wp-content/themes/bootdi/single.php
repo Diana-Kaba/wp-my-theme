@@ -131,7 +131,14 @@ get_header();?>
         ?>
         <hr>
         <!-- Post Content -->
-        <?php the_content();?>
+        <?php the_content();
+        wp_link_pages();
+        // $defaults = array(
+        //     'before' => '<div class="row justify-content-center align-items-center">' . __('Pages:'),
+        //     'after' => '</div>',
+        // );
+        // wp_link_pages($defaults);
+        ?>
         <hr>
         <!-- Tag cloud -->
         <?php if(has_tag()) {
@@ -139,50 +146,42 @@ get_header();?>
         echo "<hr>";
         }
         ?>
+        <!-- Pagination -->
+        <ul class="pagination justify-content-center mb-4">
+                <li class="page-item">
+                    <?php previous_post_link();?>
+                </li>
+                <li class="page-item">
+                    <?php next_post_link();?>
+                </li>
+            </ul>
+
+        <?php edit_post_link(); ?>
+
         <!-- Comments Form -->
+        <?php
+        if (comments_open() || get_comments_number()) {
+            comments_template();
+        }
+        ?>
 
-        <div class="card my-4">
-          <h5 class="card-header">Leave a Comment:</h5>
-          <div class="card-body">
-            <form>
-              <div class="form-group">
-                <textarea class="form-control" rows="3"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-          </div>
-        </div>
-        <!-- Single Comment -->
-        <div class="media mb-4">
-          <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-          <div class="media-body">
-            <h5 class="mt-0">Commenter Name</h5>
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-          </div>
-        </div>
+        <!-- Post Author Info -->
+        <div class="card mb-4">
+                <div class="card-header mb-2">
+                    <strong>
+                        Posted by
+                        <a href="<?php echo $author_URL; ?>"><?php the_author();?></a>
+                    </strong>
+                </div>
+                <div class="card-body">
+                    <div class="author-image">
+                        <?php echo get_avatar($author_ID, 90, '', false, ['class' => 'rounded-circle']); ?>
+                    </div>
+                    <?php echo nl2br(get_the_author_meta('description')); ?>
+                </div>
+            </div>
+        <!-- Post Single - Author End -->
 
-        <!-- Comment with nested comments -->
-        <div class="media mb-4">
-          <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-          <div class="media-body">
-            <h5 class="mt-0">Commenter Name</h5>
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-            <div class="media mt-4">
-              <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-              <div class="media-body">
-                <h5 class="mt-0">Commenter Name</h5>
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-              </div>
-            </div>
-            <div class="media mt-4">
-              <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-              <div class="media-body">
-                <h5 class="mt-0">Commenter Name</h5>
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
       <?php
         }
