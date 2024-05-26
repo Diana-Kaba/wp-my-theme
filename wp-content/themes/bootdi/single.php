@@ -88,12 +88,7 @@ get_header();?>
       <small>Subheading</small>
     </h1> -->
 
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item">
-        <a href="index.html">Home</a>
-      </li>
-      <li class="breadcrumb-item active">Blog Home 1</li>
-    </ol>
+    <?php breadcrumbs(); ?>
 
     <div class="row">
 
