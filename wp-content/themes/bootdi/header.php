@@ -24,17 +24,17 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <?php
-        if (has_nav_menu('primary')) {
-            wp_nav_menu(array(
-              'theme_location' => 'primary',
-              'depth' => 2,
-              'container' => false,
-              'menu_class' => 'navbar-nav ml-auto',
-              'fallback_cb' => false,
-              'walker' => new Bootkit_Nav_Walker(),
-            ));
-        }
-        ?>
+if (has_nav_menu('primary')) {
+    wp_nav_menu(array(
+        'theme_location' => 'primary',
+        'depth' => 2,
+        'container' => false,
+        'menu_class' => 'navbar-nav ml-auto',
+        'fallback_cb' => false,
+        'walker' => new Bootdi_Nav_Walker(),
+    ));
+}
+?>
       </div>
     </div>
   </nav>

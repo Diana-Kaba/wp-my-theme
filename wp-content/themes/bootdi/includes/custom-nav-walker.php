@@ -1,5 +1,5 @@
 <?php
-class Bootkit_Nav_Walker extends Walker_Nav_Menu
+class Bootdi_Nav_Walker extends Walker_Nav_Menu
 {
     public function start_lvl(&$output, $depth = 0, $args = array())
     {

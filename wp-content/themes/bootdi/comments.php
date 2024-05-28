@@ -13,23 +13,23 @@
     'fields' => [
         'author' =>
         '<div class="col col-sm-4">
-            <label>' . __('Name', 'bootkit') . '</label>
+            <label>' . __('Name', 'bootdi') . '</label>
             <input type="text" name="author" class="form-control" />
         </div>',
         'email' =>
         '<div class="col col-sm-4">
-            <label>' . __('Email', 'bootkit') . '</label>
+            <label>' . __('Email', 'bootdi') . '</label>
             <input type="text" name="email" class="form-control" />
         </div>',
         'url' =>
         '<div class="col col-sm-4">
-            <label>' . __('Website', 'bootkit') . '</label>
+            <label>' . __('Website', 'bootdi') . '</label>
             <input type="text" name="url" class="form-control" />
         </div>',
     ],
     'class_submit' => 'btn btn-primary',
-    'label_submit' => __('Submit Comment', 'bootkit'),
-    'title_reply' => __('', 'bootkit'),
+    'label_submit' => __('Submit Comment', 'bootdi'),
+    'title_reply' => __('', 'bootdi'),
 ]
 );
 ?>

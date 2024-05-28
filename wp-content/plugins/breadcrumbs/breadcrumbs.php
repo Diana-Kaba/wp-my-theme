@@ -11,7 +11,7 @@ License: GPL2
 
  function breadcrumbs()
  {
-     echo '<ol class="breadcrumb">';
+     echo '<ol class="breadcrumb mt-4 mb-3">';
      if (!is_front_page()) {
          echo '<li class="breadcrumb-item"><a href="';
          echo get_option('home');
