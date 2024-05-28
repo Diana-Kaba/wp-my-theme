@@ -177,9 +177,8 @@ if (comments_open() || get_comments_number()) {
             </div>
         <!-- Post Single - Author End -->
 
-        <h4>Related Posts
-                <?php the_category()?>
-            </h4>
+        <h3>Related Posts</h3>
+            <h4><?php the_category()?></h4>
             <div class="related-posts clearfix">
                 <?php
 $categories = get_the_category();
@@ -192,14 +191,14 @@ $categories = get_the_category();
             while ($rp_query->have_posts()) {
                 $rp_query->the_post();
                 ?>
-                <div class="mpost clearfix">
+                <div class="mpost clearfix mt-2">
                     <h5><?php the_category();?></h5>
                     <?php
 if (has_post_thumbnail()) {
                     ?>
                     <div class="entry-image">
                         <a href="<?php the_permalink();?>">
-                            <?php the_post_thumbnail('thumbnail');?>
+                            <?php the_post_thumbnail('thumbnail', ["class" => "rounded-circle"]);?>
                         </a>
                     </div>
                     <?php
