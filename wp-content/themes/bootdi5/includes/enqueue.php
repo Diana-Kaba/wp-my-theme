@@ -19,6 +19,7 @@ function bootdi_enqueue()
     wp_enqueue_style('bootstraptopic_bootstrap2');
     wp_enqueue_style('bootstraptopic_plugin');
     wp_enqueue_style('bootstraptopic_bootstrap');
+    wp_enqueue_style('style', get_stylesheet_uri());
     wp_enqueue_script('jquery');
     wp_enqueue_style('bootstraptopic_js');
     wp_enqueue_style('bootstraptopic_plugin_js');

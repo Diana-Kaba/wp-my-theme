@@ -17,39 +17,12 @@
         <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" /> -->
         <!-- Core theme CSS (includes Bootstrap)-->
         <!-- <link href="css/styles.css" rel="stylesheet" /> -->
-        <?php wp_head(); ?>
+        <?php wp_head();?>
     </head>
     <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="container px-4 px-lg-5 h-100">
-                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-                    <div class="col-lg-8 align-self-end">
-                        <h1 class="text-white font-weight-bold">Your Favorite Place for Free Bootstrap Themes</h1>
-                        <hr class="divider" />
-                    </div>
-                    <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>
-                        <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
-                    </div>
-                </div>
-            </div>
-        </header>
+
+       <?php get_header();?>
+
         <!-- About-->
         <section class="page-section bg-primary" id="about">
             <div class="container px-4 px-lg-5">
@@ -161,6 +134,38 @@
                 </div>
             </div>
         </div>
+
+        <!-- Blog Entries Column -->
+        <div class="container d-flex flex-column justify-content-center mt-4">
+            <div class="rowr d-flex justify-content-center">
+                      <div class="col-md-8">
+        <!-- <h1 class="my-4">Page Heading
+          <small>Secondary Text</small>
+        </h1> -->
+        <?php if (have_posts()) {
+            while (have_posts()) {
+                the_post();
+                get_template_part('partials/posts/content-excerpt');
+        }
+        }
+        ?>
+
+        <!-- Pagination -->
+        <ul class="pagination justify-content-center mb-4">
+                <li class="page-item">
+                    <?php previous_posts_link("&larr; Older");?>
+                    <!-- <a class="page-link" href="#">&larr; Older</a> -->
+                </li>
+                <li class="page-item">
+                    <?php next_posts_link("Newer &rarr;");?>
+                    <!-- <a class="page-link" href="#">Newer &rarr;</a> -->
+                </li>
+            </ul>
+      </div>
+            </div>
+        </div>
+
+
         <!-- Call to action-->
         <section class="page-section bg-dark text-white">
             <div class="container px-4 px-lg-5 text-center">
@@ -243,11 +248,15 @@
                 </div>
             </div>
         </section>
-        <!-- Footer-->
-        <footer class="bg-light py-5">
-            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2023 - Company Name</div></div>
-        </footer>
+
+        <div class="container d-flex flex-column">
+            <div class="row d-flex justify-content-center">
+                <?php get_sidebar();?>
+            </div>
+        </div>
+        <?php get_footer();?>
         <?php wp_footer();?>
+
         <!-- Bootstrap core JS-->
         <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> -->
         <!-- SimpleLightbox plugin JS-->
