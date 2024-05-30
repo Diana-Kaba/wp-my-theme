@@ -1,5 +1,5 @@
                 <!-- Navigation-->
-                <nav class="navbar navbar-expand-lg navbar-light py-3 <?php if (!is_front_page()) { echo "bg-dark"; } else { echo "fixed-top"; } ?>" id="mainNav">
+<nav class="navbar navbar-expand-lg navbar-light py-3 <?php if (!is_front_page()) { echo "bg-dark"; } else { echo "fixed-top"; } ?>" id="mainNav">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,7 +26,7 @@ if (has_nav_menu('primary')) {
                         </ul> -->
                 </div>
             </div>
-        </nav>
+</nav>
 
         <?php if (is_front_page()) {?>
         <!-- Masthead-->
