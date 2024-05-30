@@ -15,6 +15,8 @@
 <?php get_header();?>
 
 <div class="container">
+<?php breadcrumbs(); ?>
+
     <div class="row">
         <div class="col-md-12">
 

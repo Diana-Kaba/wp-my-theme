@@ -13,6 +13,8 @@
 
 <!-- Page Content -->
 <div class="container mt-4">
+<?php breadcrumbs(); ?>
+
     <div class="row">
 
         <!-- Post Content Column -->

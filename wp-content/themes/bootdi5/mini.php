@@ -27,6 +27,8 @@
 
 <!-- Page Content -->
 <div class="container">
+<?php breadcrumbs(); ?>
+
     <div class="row">
 
         <!-- Post Content Column -->

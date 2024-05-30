@@ -14,7 +14,7 @@
 
     <!-- Page Content -->
 <div class="container mt-4">
-
+<?php breadcrumbs(); ?>
 
 <!-- Marketing Icons Section -->
 
