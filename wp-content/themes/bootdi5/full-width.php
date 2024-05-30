@@ -1,7 +1,7 @@
-/*
-* Template Name: Full Width Page
- * Template post type: post, page, movies
-*/
+<!--
+Template Name: Full Width Page
+Template post type: post, page, movies 
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +15,7 @@
 </head>
 
 <body>
+<?php get_header();?>
 
 <!-- Page Content -->
 <div class="container">

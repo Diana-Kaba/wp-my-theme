@@ -1,6 +1,4 @@
-/*
-* Template Name: Mini News
-*/
+<!-- Template Name: Mini News -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +12,7 @@
 </head>
 
 <body>
+<?php get_header();?>
 
 <div class="container">
     <div class="row">

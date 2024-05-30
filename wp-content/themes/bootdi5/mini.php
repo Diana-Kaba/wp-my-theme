@@ -1,6 +1,4 @@
-/*
-* Template Name: Mini
-*/
+<!-- Template Name: Mini -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +12,7 @@
 </head>
 
 <body>
+<?php get_header();?>
 
 <div class="container">
     <div class="row">
@@ -35,8 +34,8 @@
         <?php while (have_posts()) {
     the_post();?>
         <?php if (has_post_thumbnail()) {?>
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item center">
-            <div class="card h-100  ">
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item center mb-3">
+            <div class="card h-100">
                 <a href="<?php the_permalink();?>"><?php the_post_thumbnail('thumbnail', array(
         'class' => 'mx-auto d-block w-100 h-auto'));?></a>
                 </p>
