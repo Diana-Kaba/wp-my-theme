@@ -14,6 +14,7 @@ if (has_post_thumbnail()) {
 ?>
                 <div class="card-body">
                     <h2 class="card-title"><a href="<?php the_permalink()?>"><?php the_title()?></a></h2>
+                    <p>Post category: <?php the_category(" ")?></p>
                     <!-- <p class="card-text"> -->
                     <?php the_excerpt()?>
                     <!-- </p> -->

@@ -49,7 +49,7 @@ function bootdi_load_posts()
         while (have_posts()) {
             the_post();
 
-            // echo the_title();
+            //  echo $title ;
             include "templates/template.php";
         }
     }
