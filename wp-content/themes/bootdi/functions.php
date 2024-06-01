@@ -14,6 +14,18 @@ add_action('wp_enqueue_scripts', 'bootdi_enqueue');
 add_action( 'after_setup_theme', 'bootdi_setup_theme');
 add_action('widgets_init', 'bootdi_widgets');
 
+
+// Ajax
+function bootdi_ajax()
+{
+    $summa = $_POST['param1'] + $_POST['param2'];
+    echo $summa;
+    die;
+}
+
+add_action('wp_ajax_bootdi', 'bootdi_ajax');
+add_action('wp_ajax_nopriv_bootdi', 'bootdi_ajax');
+
 // add_filter('next_posts_link_attributes', 'posts_link_attributes');
 // add_filter('previous_posts_link_attributes', 'posts_link_attributes');
 
