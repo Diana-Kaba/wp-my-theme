@@ -27,7 +27,8 @@ get_header();?>
   <!-- Page Content -->
   <div class="container mt-4 mb-3">
 
-    <?php breadcrumbs(); ?>
+    <!-- <?php breadcrumbs(); ?> -->
+    <?php echo do_shortcode('[breadcrumbs]'); ?>
 
     <div class="row">
 
