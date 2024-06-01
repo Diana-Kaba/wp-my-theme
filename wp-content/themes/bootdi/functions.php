@@ -38,3 +38,13 @@ function bartag_func($atts) {
     return "<h5 style='text-align: center;'>{$foo}</h5>";
 }
 add_shortcode( 'bartag', 'bartag_func');
+
+// [myurl]
+function site_url_shortcode($atts)
+{
+    extract(shortcode_atts( array(
+        'link' => site_url(),
+    ), $atts));
+    return "<a href='{$link}' target='_blank'>{$link}</a>";
+}
+add_shortcode('myurl', 'site_url_shortcode');
