@@ -28,3 +28,13 @@ function foobar_func( $atts ){
     return "<h4>foo and bar</h4>";
 }
 add_shortcode('foobar', 'foobar_func');
+
+// [bartag foo="foo-value"]
+function bartag_func($atts) {
+    extract( shortcode_atts( array(
+        'foo' => 'значення за замовчуванням 1',
+        'bar' => 'значення за замовчуванням 2',
+    ), $atts));
+    return "<h5 style='text-align: center;'>{$foo}</h5>";
+}
+add_shortcode( 'bartag', 'bartag_func');
