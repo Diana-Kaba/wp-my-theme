@@ -9,7 +9,7 @@
   <?php wp_footer();?>
 
   <!-- Ajax button -->
-  <button id="bootdi_button">Надіслати</button>
+  <!-- <button id="bootdi_button">Надіслати</button> -->
       <script>
       jQuery(function($) {
           $('#bootdi_button').click(function() {

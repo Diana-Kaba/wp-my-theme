@@ -23,8 +23,8 @@ function bootdi_ajax()
     die;
 }
 
-add_action('wp_ajax_bootdi', 'bootdi_ajax');
-add_action('wp_ajax_nopriv_bootdi', 'bootdi_ajax');
+// add_action('wp_ajax_bootdi', 'bootdi_ajax');
+// add_action('wp_ajax_nopriv_bootdi', 'bootdi_ajax');
 
 // add_filter('next_posts_link_attributes', 'posts_link_attributes');
 // add_filter('previous_posts_link_attributes', 'posts_link_attributes');
