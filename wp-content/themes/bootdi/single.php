@@ -33,8 +33,8 @@ get_header();?>
       <small>Subheading</small>
     </h1> -->
 
-    <!-- <?php breadcrumbs(); ?> -->
-    <?php echo do_shortcode('[breadcrumbs]'); ?>
+    <?php breadcrumbs(); ?>
+    <!-- <?php echo do_shortcode('[breadcrumbs]'); ?> -->
 
     <div class="row">
 
