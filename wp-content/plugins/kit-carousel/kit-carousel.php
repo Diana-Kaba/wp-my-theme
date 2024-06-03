@@ -31,3 +31,8 @@ add_filter('the_content', 'kc_show_carousel');
 add_action('admin_menu', 'kc_create_menu');
 
 // Shortcodes
+function kc_show_carousel_shortcode($atts)
+{
+    return kc_show_carousel($content);
+}
+add_shortcode('kc_show_carousel', 'kc_show_carousel_shortcode');
