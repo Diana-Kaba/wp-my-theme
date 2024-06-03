@@ -23,8 +23,8 @@ function kc_show_carousel($content)
                 <div class="owl-carousel owl-theme">';
             while ($query->have_posts()) {
                 $query->the_post();
-                $html .= '<div class="item"><h5>';
-                $html .= '<a href="' . get_permalink($query->post->ID) . '" class="text-dark">' . $query->post->post_title . '</a>';
+                $html .= '<div class="item" style="background: lightblue url(' . get_the_post_thumbnail_url($query->post->ID, 'thumbnail') . ') no-repeat; background-size:cover;"><h5>';
+                $html .= '<a href="' . get_permalink($query->post->ID) . '" class="text-light" style="text-decoration: none;">' . $query->post->post_title . '</a>';
                 $html .= '</h5></div>';
             }
             $html .= ' </div>
